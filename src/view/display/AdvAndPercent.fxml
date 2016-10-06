@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<BorderPane fx:id="mainBorder" prefHeight="700.0" prefWidth="1400.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.displayControllers.AdvAndPercentController">
+    <padding>
+        <javafx.geometry.Insets bottom="10" top="10" right="10" left="10" />
+    </padding>
+    <top>
+        <BorderPane >
+            <padding>
+                <javafx.geometry.Insets bottom="10"  />
+            </padding>
+            <left>
+                <GridPane alignment="CENTER" hgap="10" >
+                    <Label text="SelectDate" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <DatePicker fx:id="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    
+                    <Label text="Select Group" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                    <TextField fx:id="groupField" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                    
+                    <Button text="Submit" fx:id="submitBtn" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                </GridPane> 
+            </left>
+        </BorderPane>
+    </top>
+    <center>
+        <TableView fx:id="tableView">
+            <columns >
+                <TableColumn fx:id="col1" text="PartyName"  prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="PartyName" />
+                    </cellValueFactory>
+                </TableColumn>  
+
+                <TableColumn fx:id="col2" text="BillNo"  prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="BillNo" />
+                    </cellValueFactory>
+                </TableColumn> 
+
+                <TableColumn fx:id="col3" text="BillAmt"   prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="BillAmt" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="col4" text="Comm"   prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="Comm" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="col5" text="Excess"   prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="Excess" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="col6" text="Loss"   prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="Loss" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="col7" text="PercentCutting"   prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="PercentCutting" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="col8" text="AdvCutting"   prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="AdvCutting" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="col9" text="Balance"   prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="Balance" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

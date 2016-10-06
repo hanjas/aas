@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="142.0" prefWidth="282.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.displayControllers.ShowInsertedBillController">
+   <children>
+      <Label layoutX="31.0" layoutY="29.0" text="Party Name" />
+      <TextField fx:id="partyNameField" layoutX="103.0" layoutY="25.0" onAction="#partyNameAction" />
+      <Label layoutX="45.0" layoutY="66.0" text="Bill No" />
+      <TextField fx:id="billNoField" layoutX="103.0" layoutY="62.0" onAction="#tabKey" prefHeight="25.0" prefWidth="149.0" />
+      <Button fx:id="submitBtn" layoutX="198.0" layoutY="97.0" mnemonicParsing="false" onAction="#showBillOnMouse" onKeyPressed="#showBill" text="Submit" />
+   </children>
+</AnchorPane>

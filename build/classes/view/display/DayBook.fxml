@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="159.0" prefWidth="339.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.displayControllers.DayBookController">
+   <children>
+      <DatePicker fx:id="fromDatePicker" layoutX="114.0" layoutY="42.0" onAction="#tabKey" />
+      <Label layoutX="34.0" layoutY="46.0" text="From Date" />
+      <Button fx:id="okBtn" layoutX="189.0" layoutY="117.0" mnemonicParsing="false" onAction="#showDetailsOnMouse" onKeyPressed="#showDetails" prefHeight="25.0" prefWidth="52.0" text="Ok" />
+      <Button fx:id="cancelBtn" layoutX="261.0" layoutY="117.0" mnemonicParsing="false" onAction="#cancelOnMouse" onKeyPressed="#cancel" text="Cancel" />
+      <Label layoutX="34.0" layoutY="80.0" text="To Date" />
+      <DatePicker fx:id="toDatePicker" layoutX="114.0" layoutY="76.0" onAction="#tabKey" />
+   </children>
+</AnchorPane>

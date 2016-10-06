@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="205.0" prefWidth="354.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.displayControllers.SalesReportController">
+    <children>
+      <Label layoutX="52.0" layoutY="50.0" text="From" />
+      <DatePicker fx:id="fromDatePicker" layoutX="120.0" layoutY="46.0" onAction="#tabKey" />
+      <Label layoutX="59.0" layoutY="95.0" text="To" />
+      <DatePicker fx:id="toDatePicker" layoutX="120.0" layoutY="91.0" onAction="#tabKey" />
+      <Button fx:id="okBtn" layoutX="195.0" layoutY="156.0" mnemonicParsing="false" onAction="#showDetailsOnMouse" onKeyPressed="#showDetails" prefHeight="25.0" prefWidth="52.0" text="Ok" />
+      <Button fx:id="cancelBtn" layoutX="268.0" layoutY="156.0" mnemonicParsing="false" onAction="#cancelOnMouse" onKeyPressed="#cancel" text="Cancel" />
+   </children>
+</AnchorPane>

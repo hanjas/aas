@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainBorder" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.insertControllers.InsertExpenceController">
+    <padding>
+        <javafx.geometry.Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <center>
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
+           <children>
+               <Label text="Date" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+               <DatePicker fx:id="datePicker" onAction="#tabKey" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                
+               <Label text="Group" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+               <TextField fx:id="groupField" onAction="#tabKey" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               
+               <Label text="Category" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+               <TextField fx:id="categoryField" onAction="#tabKey" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                
+               <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+               <TextField fx:id="amountField" onAction="#tabKey" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+           </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+             
+        </GridPane> 
+    </center>
+    <bottom>
+        <BorderPane>
+            <left>
+                <HBox maxWidth="1.7976931348623157E308" prefHeight="9.0" prefWidth="137.0" BorderPane.alignment="CENTER">
+                   <padding>
+                      <Insets left="50.0" />
+                   </padding>
+                   <children>
+                      <Button fx:id="nextBtn" mnemonicParsing="false" onKeyPressed="#nextAction" text="Next" />
+                   </children>
+                </HBox>
+             </left>
+            <right>
+                <GridPane alignment="CENTER" hgap="10">
+                   <children>
+                       <Button fx:id="okBtn" onAction="#saveAndCloseOnMouse" onKeyPressed="#saveAndClose" text="Ok" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                       <Button fx:id="cancelBtn" onAction="#cancelOnMouse" onKeyPressed="#cancel" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                   </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+            </right>
+        </BorderPane>
+    </bottom>
+</BorderPane>

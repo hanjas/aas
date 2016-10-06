@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainBorder" minHeight="400" minWidth="400" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.CreateSellerController">
+    <stylesheets>
+        <URL value="@/css/mainview.css" />
+    </stylesheets>
+    <padding>
+        <javafx.geometry.Insets bottom="10" left="10" right="10" top="10" /> 
+    </padding>
+    <center>
+        <GridPane alignment="CENTER" hgap="5" vgap="5">
+           <children>
+               <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" /> 
+               <TextField fx:id="nameField" onAction="#tabKey" promptText="Seller Name" GridPane.columnIndex="1" GridPane.rowIndex="0" /> 
+               
+               <Label text="OP:Balance" GridPane.columnIndex="0" GridPane.rowIndex="1" /> 
+               <GridPane hgap="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <children>
+                      <TextField fx:id="toGetField" onAction="#tabKey" promptText="To Get" GridPane.columnIndex="0" GridPane.rowIndex="0" /> 
+                      <TextField fx:id="toGiveField" onAction="#tabKey" promptText="To Give" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints> 
+               </GridPane>
+               
+               <Label text="Commission" GridPane.columnIndex="0" GridPane.rowIndex="2" /> 
+               <TextField fx:id="commissionField" onAction="#tabKey" promptText="in percentage" GridPane.columnIndex="1" GridPane.rowIndex="2" /> 
+               
+               <Label text="Capital Advance" GridPane.columnIndex="0" GridPane.rowIndex="3" /> 
+               <TextField fx:id="capitalAdvanceField" onAction="#tabKey" promptText="amount" GridPane.columnIndex="1" GridPane.rowIndex="3" /> 
+               
+               <Label text="Adv:Cutting" GridPane.columnIndex="0" GridPane.rowIndex="4" /> 
+               <TextField fx:id="advCuttingField" onAction="#tabKey" promptText="amount" GridPane.columnIndex="1" GridPane.rowIndex="4" /> 
+               
+               <Label text="Percentage Cutting" GridPane.columnIndex="0" GridPane.rowIndex="5" /> 
+               <TextField fx:id="percentCuttingField" onAction="#tabKey" promptText="in percentage" GridPane.columnIndex="1" GridPane.rowIndex="5" /> 
+               
+               <Label text="Box Expence" GridPane.columnIndex="0" GridPane.rowIndex="6" /> 
+               <TextField fx:id="boxExpField" onAction="#tabKey" promptText="amount" GridPane.columnIndex="1" GridPane.rowIndex="6" /> 
+               
+               <Label text="Group" GridPane.columnIndex="0" GridPane.rowIndex="7" /> 
+               <TextField fx:id="groupField" onAction="#tabKey" promptText="group name" GridPane.columnIndex="1" GridPane.rowIndex="7" /> 
+               
+               <Label text="Bank Name" GridPane.columnIndex="0" GridPane.rowIndex="8" /> 
+               <TextField fx:id="bankNameField" onAction="#tabKey" GridPane.columnIndex="1" GridPane.rowIndex="8" /> 
+               
+               <Label text="A/C No" GridPane.columnIndex="0" GridPane.rowIndex="9" /> 
+               <TextField fx:id="acNoField" onAction="#tabKey" GridPane.columnIndex="1" GridPane.rowIndex="9" /> 
+               
+               <Label text="Branch" GridPane.columnIndex="0" GridPane.rowIndex="10" /> 
+               <TextField fx:id="branchField" onAction="#tabKey" GridPane.columnIndex="1" GridPane.rowIndex="10" /> 
+               
+               <Label text="IFC Code" GridPane.columnIndex="0" GridPane.rowIndex="11" /> 
+               <TextField fx:id="ifcCodeField" onAction="#tabKey" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+           </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints> 
+        </GridPane>
+    </center>
+    <bottom>
+        <BorderPane>
+            <right>
+                <GridPane hgap="10">
+                   <children>
+                       <Button fx:id="okBtn" onAction="#saveAndCloseOnMouse" onKeyPressed="#saveAndClose" text="OK" GridPane.columnIndex="1" GridPane.rowIndex="0" /> 
+                       <Button fx:id="cancelBtn" onAction="#cancelOnMouse" text="Cancel" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                   </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints> 
+                </GridPane> 
+            </right>
+        </BorderPane>
+    </bottom>
+</BorderPane>

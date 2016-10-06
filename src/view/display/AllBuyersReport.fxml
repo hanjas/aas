@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<BorderPane fx:id="mainBorder" prefHeight="600.0" prefWidth="918.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.displayControllers.AllBuyersReportController">
+    <padding>
+        <javafx.geometry.Insets bottom="10" top="10" right="10" left="10" />
+    </padding>
+    <top>
+        <BorderPane >
+            <padding>
+                <javafx.geometry.Insets bottom="10" />
+            </padding>
+            <right>
+                <Button text="Print" fx:id="PrintBtn" />
+            </right>
+        </BorderPane>
+    </top>
+    <center>
+        <TableView fx:id="tableView">
+            <columns >
+                <TableColumn fx:id="col1" text="Date"  prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="Date" />
+                    </cellValueFactory>
+                </TableColumn>  
+
+                <TableColumn fx:id="col2" text="Name"  prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="Name" />
+                    </cellValueFactory>
+                </TableColumn> 
+
+                <TableColumn fx:id="col3" text="Box"   prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="Box" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="col4" text="Amt"   prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="Amt" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="col5" text="Payment"   prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="Payment" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="col6" text="Balance"   prefWidth="153" >
+                    <cellValueFactory><PropertyValueFactory property="Balance" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

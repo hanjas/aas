@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="397.0" prefWidth="345.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.edit.SingleSellerEditController">
+   <children>
+      <Label layoutX="23.0" layoutY="23.0" text="Name" />
+      <Label layoutX="23.0" layoutY="53.0" text="Op:Bal" />
+      <Label layoutX="23.0" layoutY="83.0" text="Comm" />
+      <Label layoutX="23.0" layoutY="113.0" text="Percent Cutt" />
+      <Label layoutX="20.0" layoutY="143.0" text="Adv Cutt" />
+      <Label layoutX="22.0" layoutY="174.0" text="Box Exp" />
+      <Label layoutX="22.0" layoutY="204.0" text="Group" />
+      <Label layoutX="22.0" layoutY="234.0" text="Bank" />
+      <Label layoutX="22.0" layoutY="264.0" text="Ac/No" />
+      <Label layoutX="22.0" layoutY="294.0" text="Branch" />
+      <Label layoutX="22.0" layoutY="324.0" text="IFC Code" />
+      <TextField fx:id="nameField" layoutX="109.0" layoutY="18.0" onAction="#tabKey" prefHeight="25.0" prefWidth="213.0" />
+      <TextField fx:id="toGetField" layoutX="109.0" layoutY="48.0" onAction="#tabKey" prefHeight="25.0" prefWidth="100.0" promptText="ToGet" />
+      <TextField fx:id="toGiveField" layoutX="222.0" layoutY="48.0" onAction="#tabKey" prefHeight="25.0" prefWidth="100.0" promptText="ToGive" />
+      <TextField fx:id="commField" layoutX="109.0" layoutY="78.0" onAction="#tabKey" prefHeight="25.0" prefWidth="213.0" />
+      <TextField fx:id="percentCuttingField" layoutX="109.0" layoutY="108.0" onAction="#tabKey" prefHeight="25.0" prefWidth="213.0" />
+      <TextField fx:id="advCuttingField" layoutX="109.0" layoutY="138.0" onAction="#tabKey" prefHeight="25.0" prefWidth="213.0" />
+      <TextField fx:id="boxExpField" layoutX="108.0" layoutY="169.0" onAction="#tabKey" prefHeight="25.0" prefWidth="213.0" />
+      <TextField fx:id="groupField" layoutX="108.0" layoutY="199.0" onAction="#tabKey" prefHeight="25.0" prefWidth="213.0" />
+      <TextField fx:id="bankNameField" layoutX="108.0" layoutY="229.0" onAction="#tabKey" prefHeight="25.0" prefWidth="213.0" />
+      <TextField fx:id="acNoField" layoutX="108.0" layoutY="259.0" onAction="#tabKey" prefHeight="25.0" prefWidth="213.0" />
+      <TextField fx:id="branchField" layoutX="108.0" layoutY="289.0" onAction="#tabKey" prefHeight="25.0" prefWidth="213.0" />
+      <TextField fx:id="ifcCodeField" layoutX="108.0" layoutY="319.0" onAction="#tabKey" prefHeight="25.0" prefWidth="213.0" />
+      <Button fx:id="okBtn" layoutX="208.0" layoutY="356.0" mnemonicParsing="false" onAction="#okBtnOnMouse" onKeyPressed="#saveAndClose" prefHeight="25.0" prefWidth="52.0" text="Ok" />
+      <Button fx:id="cancelBtn" layoutX="271.0" layoutY="356.0" mnemonicParsing="false" onAction="#cancelOnMouse" onKeyPressed="#cancel" text="Cancel" />
+   </children>
+</AnchorPane>

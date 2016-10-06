@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="240.0" prefWidth="332.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.insertControllers.InsertInvestmentController">
+    <children>
+      <DatePicker fx:id="datePicker" layoutX="117.0" layoutY="29.0" onAction="#tabKey" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="50.0" layoutY="33.0" text="Date" />
+      <Label layoutX="50.0" layoutY="63.0" text="Name" />
+      <Label layoutX="50.0" layoutY="93.0" text="Category" />
+      <Label layoutX="50.0" layoutY="124.0" text="Buy" />
+      <Label layoutX="50.0" layoutY="154.0" text="Give" />
+      <ComboBox fx:id="investmentNameField" editable="true" layoutX="117.0" layoutY="59.0" onAction="#tabKey" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="categoryField" layoutX="117.0" layoutY="89.0" onAction="#tabKey" />
+      <TextField fx:id="toGetField" layoutX="117.0" layoutY="120.0" onAction="#tabKey" />
+      <TextField fx:id="toGiveField" layoutX="117.0" layoutY="150.0" onAction="#tabKey" />
+      <Button fx:id="nextBtn" layoutX="73.0" layoutY="193.0" mnemonicParsing="false" onKeyPressed="#nextAction" text="Next" />
+      <Button fx:id="okBtn" layoutX="192.0" layoutY="193.0" mnemonicParsing="false" onAction="#saveAndCloseOnMouse" onKeyPressed="#saveAndClose" prefHeight="25.0" prefWidth="52.0" text="Ok" />
+      <Button fx:id="cancelBtn" layoutX="256.0" layoutY="193.0" mnemonicParsing="false" onAction="#cancelOnMouse" onKeyPressed="#cancel" text="Cancel" />
+   </children>
+</AnchorPane>

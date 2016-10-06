@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="323.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.displayControllers.IndividualBuyersReportController">
+   <children>
+      <Label layoutX="57.0" layoutY="30.0" text="Buyer Name" />
+      <ComboBox fx:id="buyerNameField" editable="true" layoutX="136.0" layoutY="26.0" onAction="#nameFieldTab" prefWidth="150.0" />
+      <Label layoutX="57.0" layoutY="70.0" text="From" />
+      <Label layoutX="64.0" layoutY="109.0" text="To" />
+      <DatePicker fx:id="fromDatePicker" layoutX="136.0" layoutY="66.0" onAction="#fromDateTab" onKeyPressed="#fromDateTab" prefHeight="25.0" prefWidth="150.0" />
+      <DatePicker fx:id="toDatePicker" layoutX="136.0" layoutY="105.0" prefHeight="25.0" prefWidth="150.0" />
+      <Button fx:id="okBtn" layoutX="196.0" layoutY="157.0" mnemonicParsing="false" onAction="#showDetailsOnMouse" onKeyPressed="#showDetails" prefHeight="25.0" prefWidth="45.0" text="Ok" />
+      <Button fx:id="cancelBtn" layoutX="251.0" layoutY="157.0" mnemonicParsing="false" onAction="#cancelOnMouse" onKeyPressed="#cancel" text="Cancel" />
+   </children>
+</AnchorPane>

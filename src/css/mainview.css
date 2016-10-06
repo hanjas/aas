@@ -1,0 +1,36 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-image: url('/image/background2.jpg');
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+    /*-fx-background-color: #2B2B2B;*/
+}
+.menu-bar {
+    -fx-background-color: #E7E7E7;
+}
+.menu-item {
+    -fx-background-color: #F0F0F0;
+}
+.menu-item:focused {
+    -fx-background-color: #0096c9;
+}
+#companyInfo {
+    -fx-font: 45px "warnok";
+    -fx-text-fill: white;
+}
+#okBtn {
+    -fx-pref-width: 50px;
+}
+#billTotalGrid .label {
+    -fx-font: 25px "warnok";
+}
+#insertBill .label {
+    -fx-font: 18px "warnok";
+}
+.table-cell {
+    -fx-font-size: 18px;
+    -fx-alignment: CENTER;
+}

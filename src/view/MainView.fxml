@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.input.*?>
+
+<BorderPane fx:id="mainView" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
+    <stylesheets>
+        <URL value="@/css/mainview.css"/>
+    </stylesheets>
+    <top>
+        <MenuBar fx:id="menuBar">
+            <menus>
+                <Menu text="_File" mnemonicParsing="true"  >
+                    <MenuItem text="Create Seller" onAction="#editSellers" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="s" control="DOWN" meta="UP" shift="UP" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem> 
+                    <MenuItem text="Create Buyer" onAction="#editBuyers" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="b" control="DOWN" meta="UP" shift="UP" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem> 
+                    <MenuItem text="Create Group" onAction="#editGroup" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="g" control="DOWN" meta="UP" shift="UP" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem> 
+                    <MenuItem text="Create Outstanding" onAction="#editOutstander" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="o" control="DOWN" meta="UP" shift="UP" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem>
+                    <MenuItem text="Create InvestmentGiven" onAction="#editInvestment" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="i" control="DOWN" meta="UP" shift="UP" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem>
+                    <MenuItem text="Create InvestmentTaken" onAction="#editInvestmentDept" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="d" control="DOWN" meta="UP" shift="UP" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem>
+                    <MenuItem text="Create Fish" onAction="#editFish" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="f" control="DOWN" meta="UP" shift="UP" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem>
+                    <SeparatorMenuItem />
+                    <MenuItem text="Exit"  />
+                </Menu>
+                <Menu text="_Insert" mnemonicParsing="true" >
+                    <MenuItem text="New Bill" onAction="#newBill" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="b" control="DOWN" meta="UP" shift="DOWN" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem> 
+                    <MenuItem text="Add Sales" onAction="#billDetails" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="d" control="DOWN" meta="UP" shift="DOWN" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem>
+                    <SeparatorMenuItem />
+                    <MenuItem text="Income" onAction="#insertIncome" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="i" control="DOWN" meta="UP" shift="DOWN" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem>
+                    <MenuItem text="Expense" onAction="#insertExpence" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="e" control="DOWN" meta="UP" shift="DOWN" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem>
+                    <SeparatorMenuItem />
+                    <MenuItem text="Outstanding" onAction="#insertOutstanding" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="o" control="DOWN" meta="UP" shift="DOWN" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem>
+                    <MenuItem text="InvestGiven" onAction="#insertInvestment" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="g" control="DOWN" meta="UP" shift="DOWN" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem>
+                    <MenuItem text="InvestTaken" onAction="#insertInvestmentDept" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="t" control="DOWN" meta="UP" shift="DOWN" shortcut="UP"  />  
+                        </accelerator>
+                    </MenuItem>
+                </Menu> 
+                <Menu text="_Edit" mnemonicParsing="true" >
+                    <MenuItem text="Edit Bill" onAction="#editBill"  />
+                    <MenuItem text="Income" onAction="#editIncome"  />
+                    <MenuItem text="Expence" onAction="#editExpence"  />
+                    <MenuItem text="Outstander Data" onAction="#editOutstandingData"  />
+                    <MenuItem text="InvestmentGiven Data" onAction="#editInvestmentData"  />
+                    <MenuItem text="InvestmentTakenData" onAction="#editInvestmentDeptData"  />
+                </Menu>
+                <Menu text="_View" mnemonicParsing="true" >
+                    <MenuItem text="ShowBill" onAction="#viewShowBill" />
+                    <MenuItem text="Sales Report" onAction="#viewSalesReport" />
+                    <MenuItem text="Daily View" onAction="#viewDayView" />
+                    <MenuItem text="Individual Seller" onAction="#viewIndividualSeller" />
+                    <MenuItem text="All Seller" onAction="#viewAllSeller"  />
+                    <MenuItem text="Adv and Percent" onAction="#viewAdvAndPercent" />
+                    <SeparatorMenuItem />
+                    <MenuItem text="Individual Buyer" onAction="#viewIndividualBuyersReport" />
+                    <MenuItem text="All Buyer" onAction="#viewAllBuyersReport" />
+                    <SeparatorMenuItem />
+                    <MenuItem text="Outstanding" onAction="#viewOutstandingReport"  />
+                    <MenuItem text="All Outstanding" onAction="#viewAllOutstanding"  />
+                    <SeparatorMenuItem />
+                    <MenuItem text="Day Book" onAction="#viewDayBook" />
+                    <MenuItem text="CapitalAdv Details" onAction="#viewCapitalAdvDetails" />
+                    <MenuItem text="Investment Taken" onAction="#viewInvestmentDept" />
+                    <MenuItem text="Investment Given" onAction="#viewInvestment" />
+                    <MenuItem text="Loss and Profit" onAction="#viewLossAndProfit"  />
+                    <MenuItem text="BalanceSheet" onAction="#viewBalanceSheet"  />
+                </Menu>
+                <Menu text="_Tools" mnemonicParsing="true" >
+                    <MenuItem text="Create BackUp" />
+                </Menu>
+                <Menu text="_Help" mnemonicParsing="true" >
+                    <MenuItem text="Help Content" />
+                    <MenuItem text="Check for Updates" />
+                    <MenuItem text="About" />
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <Label fx:id="companyInfo" text="AAS Fish Merchant" />
+    </center>
+</BorderPane>

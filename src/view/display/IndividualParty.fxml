@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="223.0" prefWidth="341.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.displayControllers.IndividualPartyController">
+   <children>
+      <ComboBox fx:id="partyNameField" editable="true" layoutX="117.0" layoutY="39.0" onAction="#tabKey" prefHeight="25.0" prefWidth="174.0" />
+      <DatePicker fx:id="fromDatePicker" layoutX="117.0" layoutY="81.0" onAction="#tabKey" />
+      <DatePicker fx:id="toDatePicker" layoutX="117.0" layoutY="123.0" onAction="#tabKey" />
+      <Button fx:id="okBtn" layoutX="190.0" layoutY="176.0" mnemonicParsing="false" onAction="#showDetailsOnMouse" onKeyPressed="#showDetails" prefHeight="25.0" prefWidth="52.0" text="Ok" />
+      <Button fx:id="cancelBtn" layoutX="258.0" layoutY="176.0" mnemonicParsing="false" onAction="#cancelOnMouse" onKeyPressed="#cancel" text="Cancel" />
+      <Label layoutX="35.0" layoutY="43.0" text="Party Name" />
+      <Label layoutX="66.0" layoutY="85.0" text="From" />
+      <Label layoutX="73.0" layoutY="127.0" text="To" />
+   </children>
+</AnchorPane>

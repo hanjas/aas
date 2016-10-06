@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.edit.EditIncomeController">
+   <children>
+      <Label layoutX="14.0" layoutY="30.0" text="From" />
+      <DatePicker fx:id="fromDatePicker" layoutX="54.0" layoutY="26.0" />
+      <Label layoutX="273.0" layoutY="30.0" text="To" />
+      <DatePicker fx:id="toDatePicker" layoutX="300.0" layoutY="26.0" />
+      <Button fx:id="showBtn" layoutX="516.0" layoutY="26.0" mnemonicParsing="false" onAction="#showBtnAction" text="Show" />
+      <ListView fx:id="listView" layoutX="5.0" layoutY="65.0" prefHeight="528.0" prefWidth="988.0" />
+   </children>
+</AnchorPane>

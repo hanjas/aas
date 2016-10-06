@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainBorder" prefHeight="176.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateOutstandingController">
+   <padding>
+        <javafx.geometry.Insets bottom="10" left="10" right="10" top="10" /> 
+    </padding>
+    <center>
+      <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
+         <children>
+           <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="nameField" onAction="#tabKey" GridPane.columnIndex="1" />
+            <Label text="OP:Balance" GridPane.rowIndex="1" />
+            <GridPane hgap="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="toGetField" onAction="#tabKey" promptText="Buy" />
+                  <TextField fx:id="toGiveField" onAction="#tabKey" promptText="Give" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <Label text="Group" GridPane.rowIndex="2" />
+            <TextField fx:id="groupeField" onAction="#tabKey" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+   </center>
+   <bottom>
+        <BorderPane>
+            <right>
+                <GridPane hgap="10">
+                   <children>
+                       <Button fx:id="okBtn" onAction="#saveAndCloseOnMouse" onKeyPressed="#saveAndClose" prefHeight="25.0" prefWidth="50.0" text="Ok" GridPane.columnIndex="1" GridPane.rowIndex="0" /> 
+                       <Button cancelButton="true" onAction="#cancelOnMouse" onKeyPressed="#cancel" text="Cancel" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                   </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints> 
+                </GridPane> 
+            </right>
+        </BorderPane>
+    </bottom>
+</BorderPane>

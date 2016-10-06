@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<BorderPane fx:id="mainBorder" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.insertControllers.InsertOtherDetailsController">
+    <padding>
+        <javafx.geometry.Insets bottom="10" left="10" right="10" top="10" /> 
+    </padding>
+    <top>
+        <GridPane alignment="CENTER" hgap="10">
+           <children>
+                <Label fx:id="date" text="Date" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <DatePicker fx:id="datePicker" onAction="#tabKey" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+               
+                <Label fx:id="partyName" text="Party Name" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <ComboBox fx:id="partyNameField" editable="true" maxWidth="1.7976931348623157E308" onAction="#partyNameAction" prefHeight="25.0" prefWidth="211.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+               
+                <Label fx:id="billNo" text="Bill:No" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                <TextField fx:id="billNoField" onAction="#tabKey" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+               
+                <Button fx:id="submitBtn" onAction="#submitOnAction" onKeyPressed="#submit" text="Submit" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+           </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane> 
+    </top>
+    <center>
+        <BorderPane>
+            <center>
+                <GridPane alignment="CENTER" hgap="10">
+                    <padding>
+                        <javafx.geometry.Insets bottom="10" top="10" /> 
+                    </padding>
+                   <children>
+                       <Label text="Buyer Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                       <ComboBox fx:id="buyerNameField" editable="true" onAction="#tabKey" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+   
+                       <Label text="Box Count" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                       <TextField fx:id="boxCountField" onAction="#tabKey" prefWidth="50" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+   
+                       <Label text="Bill Amt" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                       <TextField fx:id="billAmtField" onAction="#tabKey" prefWidth="100" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+   
+                       <Label text="Cash Paid" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+                       <TextField fx:id="cashPaidField" onAction="#cashPaidAction" prefWidth="100" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+                   </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane> 
+            </center>
+            <bottom>
+                <TableView fx:id="tableView">
+                    <columns>
+                        <TableColumn fx:id="col1" prefWidth="195" text="BuyerName">
+                            <cellValueFactory><PropertyValueFactory property="BuyerName" />
+                            </cellValueFactory>
+                        </TableColumn>  
+
+                        <TableColumn fx:id="col2" prefWidth="195" text="BoxCount">
+                            <cellValueFactory><PropertyValueFactory property="BoxCount" />
+                            </cellValueFactory>
+                        </TableColumn> 
+
+                        <TableColumn fx:id="col3" prefWidth="195" text="BillAmt">
+                            <cellValueFactory><PropertyValueFactory property="BillAmt" />
+                            </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn fx:id="col4" prefWidth="195" text="CashPaid">
+                            <cellValueFactory><PropertyValueFactory property="CashPaid" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </bottom>
+         <top>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="108.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.0" minWidth="10.0" prefWidth="255.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="97.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="75.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="90.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="154.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Party Name : ">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="partyNameLabel" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="202.0" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Total Box : " GridPane.columnIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalBoxLabel" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Bill Amt : " GridPane.columnIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="billAmtLabel" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </GridPane>
+         </top>
+        </BorderPane>
+    </center>
+    <bottom>
+        <BorderPane>
+            <padding>
+                <javafx.geometry.Insets top="10" />
+            </padding>
+            <right>
+                <GridPane alignment="CENTER" hgap="10">
+                   <children>
+                       <Button fx:id="okBtn" onAction="#saveAndCloseOnMouse" onKeyPressed="#saveAndClose" text="Ok" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                       <Button fx:id="cancelBtn" onKeyPressed="#cancel" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                   </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane> 
+            </right>
+         <center>
+            <GridPane prefHeight="30.0" prefWidth="639.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="178.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="125.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lossLabelT" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Loss" textFill="#d71f1f" visible="false" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lossLabel" maxWidth="1.7976931348623157E308" textFill="#d71f1f" visible="false" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="excessLabelT" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Excess" textFill="#1f9025" visible="false" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="excessLabel" maxWidth="1.7976931348623157E308" textFill="#1f9025" visible="false" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="boxNeedLabel" alignment="CENTER" maxWidth="1.7976931348623157E308">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </center>
+        </BorderPane>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.edit.EditFishController">
+    <children>
+      <TextField fx:id="searchField" editable="true" layoutX="7.0" layoutY="7.0" prefHeight="26.0" prefWidth="206.0" promptText="search" />
+      <Button fx:id="createBtn" onAction="#createFish" onKeyPressed="#createFishOnKeyPress" layoutX="493.0" layoutY="8.0" mnemonicParsing="false" text="Create New (F1)" />
+      <ListView fx:id="listView" layoutX="7.0" layoutY="39.0" prefHeight="354.0" prefWidth="587.0" />
+   </children>
+</AnchorPane>
